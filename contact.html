@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria Script">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Contact</title>
+</head>
+<body>
+    <header>
+        <div id="skip"><a href="#main_content">Skip to Main Content</a></div>
+        <div id="logo">Jamie Lee</div>
+        <nav>
+            <div class="nav_links">
+                <a href = "index.html">
+                    <div class="nav_item">Home</div>
+                </a>
+                <a href = "projects.html">
+                    <div class="nav_item">Projects</div>
+                </a>
+                <a href = "about_me.html">
+                    <div class="nav_item">About</div>
+                </a>
+                <a href = "contact.html">
+                    <div class="nav_item current">Contact</div>
+                </a>
+            </div>
+
+            <button class="hamburger">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </button>				
+		</nav>
+    </header>
+
+	<main id="main_content">
+        <div class="note">
+            <h1>Want to get in touch?</h1>
+            <p>Thank you for taking the time to view my portfolio! If you have additional inquiries or would like to contact me for more specifics on my experience and projects, please complete and submit the following form. I will respond to your message as soon as is convenient (within 3-5 business days).</p>
+        </div>
+
+        <form action="https://formspree.io/f/xvodgqnv" method="POST" target="_blank">
+            <fieldset>
+                <legend>Contact Form</legend>
+                
+                <div class="contact_form">
+                    <div class="firstname">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+                    </div>
+                    
+                    <div class="lastname">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name">
+                    </div>
+                    
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type = "email" id="email" name="_replyto" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="message">
+                        <label for="message">Leave A Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <div class="checkbox_container">
+                            <input type="checkbox" id="consent" checked="checked" required> 
+                        </div>
+                        <div class="checkbox_label">
+                            <label class="checkbox_text" for="consent">I consent to being contacted via the email address provided.</label>
+                        </div>
+                        
+                    </div>
+                
+                    <div class="submit">
+                        <button type="submit" name="submit">Send Message</button>    
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+	<footer>
+		<div class="footer_content">
+            <p><strong>Jamie Lee&copy;</strong></p>
+            <p>Thank you for taking the time to review my portfolio!</p>
+        </div>
+	</footer>
+
+    <script src="js/hamburger.js"></script>
+</body>
+</html>
