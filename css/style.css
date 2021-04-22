@@ -1,0 +1,757 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 18px;
+    font-family: "Nunito Sans", "sans-serif";
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 80px;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    background-color: #2e2e2e;
+    z-index: 1;
+}
+
+:focus-visible{
+    border: solid rgb(126, 2, 2);
+    border-radius: 2px;
+    box-shadow: inset 0 3px 3px 0 rgba(139, 139, 139,0.2);
+}
+
+#skip a{
+    background-color: rgb(126, 2, 2);
+    text-decoration: none;
+    padding: 5px 0 5px 0;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    left: -300px;
+    padding: 7px;
+    -webkit-transition: left 1s ease-out;
+    transition: left 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: 100px;
+}
+
+#skip a:focus{
+    position: absolute;
+    left: 0;
+}
+
+#logo {
+    color: white;
+    display: inline-block;
+    position: fixed;
+    top: 25px;
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-family: "Euphoria Script", "sans-serif";
+}
+
+.nav_item {
+    padding: 15px;
+    text-align: right;
+    line-height: 1.5em;
+  }
+
+.nav_links a, .nav_links a:visited{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.current, .nav_item:hover, .nav_item:visited:hover{
+    background-color: rgb(177, 4, 4);
+    color: white;
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.nav_links{
+    display: none;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    right: 0;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+}
+
+.fadein {
+    display: flex;
+    flex-direction: column;
+    
+    -webkit-animation: fadein 0.25s;
+    -moz-animation: fadein 0.25s; 
+    -ms-animation: fadein 0.25s; 
+    -o-animation: fadein 0.25s; 
+    animation: fadein 0.25s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+} 
+
+.hamburger{
+    float: right;
+    padding: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.open{
+    background-color: rgb(245, 245, 245);
+}
+
+.bar1, .bar2, .bar3{
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 8px auto;
+    background-color: white;
+}
+
+.bar_open{
+    background-color: black;
+}
+  
+.nav_item:active{
+    box-shadow: inset 0 2px 2px 0 rgba(139, 139, 139,0.2);
+}
+
+#main_content {
+    position: relative;
+    padding: 5vh 3vw;
+    margin: 0;
+    min-height: calc(100vh - 180px);
+    min-height: -o-calc(100vh - 180px); 
+    min-height: -webkit-calc(100vh - 180px); 
+    min-height: -moz-calc(100vh - 180px); 
+}
+
+#main_exception {
+    padding: 0;
+}
+
+h1{
+    font-size: 2em;
+    line-height: 1;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 10px;;
+}
+
+.current_projects h1{
+    font-size: 1.5em;
+}
+
+.note h1{
+    margin-bottom: 3vh;
+}
+
+h2{
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.welcome h2{
+    font-size: 1em;
+    margin-top: 10px;
+    color: rgb(177, 4, 4);
+}
+
+h3{
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+p{
+    text-align: center;
+    padding: 10px;
+}
+
+.welcome{
+    margin: -5vh -3vw;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: url("../images/cover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: white;
+    box-shadow: inset 0 0 8px 8px white;
+}
+
+.welcome_text{
+    padding: 0 3vw;
+}
+
+.current_projects{
+    margin-top: 10vh;
+    background-color: white;
+}
+
+.research_highlights{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5vh;
+    margin: 3vh;
+}
+
+.text_image_container{
+    position: relative;
+    text-align: center;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.text_image_container img{
+    box-shadow: 2px 2px #8888887e;
+    border: 1px rgb(187, 187, 187) solid;
+    height: auto;
+    width: 70vw;
+    display: block;
+    margin: auto;
+    background-color: white;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.text_image_container:hover, .text_image_container:focus, .text_image_container:focus-within{
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+.text_container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+.bio{
+    margin: 2vh 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bio img{
+    padding: 2px;
+    border: 4px solid black;
+    width: 70vw;
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.bio_text{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.project_content h1{
+    margin-bottom: 1em;
+}
+
+.youtube_music h1, .remote_hires h1, .rta h1{
+    text-shadow: 2px 1px rgb(116, 116, 116);
+}
+
+.winning_futures h1, .wharton h1{
+    text-shadow: 2px 1px rgb(167, 167, 167);
+}
+
+.youtube_music, .winning_futures, .remote_hires, .wharton, .rta{
+    padding: 10vw;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.youtube_music{
+    background-image: url("../images/youtube_music.jpg"); 
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+}
+.winning_futures{
+    background-image: url("../images/winning_futures.png"); 
+}
+
+.remote_hires{
+    background-image: url("../images/paper_prototype.png"); 
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+}
+
+.wharton{
+    background-image: url("../images/wharton.png"); 
+}
+
+.rta{
+    background-image: url("../images/rta.png"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.3);
+}
+
+.youtube_music, .remote_hires, .rta {
+    background-attachment: fixed;
+}
+
+.winning_futures, .wharton{
+    color: black;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
+}
+
+.youtube_music, .remote_hires, .rta{
+    color: white;
+}
+
+.resume_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    max-width: 500px;
+    height: 2em;
+    text-align: center;
+    align-items: center;
+    box-shadow: 2px 2px rgb(139, 139, 139);
+    background-color: rgb(177, 4, 4);
+    padding: 5px 0 5px 0;
+    border-radius: 10px;
+}
+
+.resume_link{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+.bio_text a, .note a{
+    color: rgb(177, 4, 4);
+    font-weight: bold;
+}
+
+.bio_text a:hover, .note a:hover{
+    background-color: rgb(177, 4, 4);
+    color: white;
+}
+
+.youtube_music i, .remote_hires i, .rta i{
+    color: rgb(228, 182, 182);
+    font-weight: 500;
+}
+
+.winning_futures i, .wharton i{
+    color:rgb(126, 2, 2);
+    font-weight: 580;
+}
+
+.rta a{
+    display: inline-block;
+    color: rgb(216, 170, 170);
+    text-transform: capitalize;
+}
+
+.rta a:hover{
+    background-color: rgb(216, 170, 170);
+    color: black;
+}
+
+.note {
+    margin-bottom: 5vh;
+    padding: 0 10vw;
+}
+
+.bio_text a:visited, .note a:visited{
+    color: purple;
+}
+
+.bio_text a:visited:hover, .note a:visited:hover{
+    color: white;
+    background-color: purple;
+}
+
+.project_content a:visited{
+    color: rgb(253, 152, 253);
+}
+
+.project_content a:visited:hover{
+    color: black;
+    background-color: rgb(253, 152, 253);
+}
+  
+/* Form formatting */ 
+form {
+    margin: auto;
+    background-color: #fddcdc;
+    border-radius: 5px;
+    width: 80vw;
+  }
+
+fieldset{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+  
+.contact_form {
+    padding: 20px;
+    width: 70vw;
+}
+
+legend{ 
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+}
+  
+label{
+    display: block;
+    width: 70vw;
+    text-align: left;
+}
+
+legend, label{
+    color: #2e2e2e;
+}
+
+.checkbox_text{
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    display: block;
+    border: 1px solid #949494;
+    box-sizing: border-box;
+    border-radius: 5px;
+    -webkit-box-shadow:0 0 2px rgb(179, 179, 179) inset;
+    -moz-box-shadow:0 0 2px rgb(179, 179, 179) inset;
+    box-shadow:0 0 2px rgb(179, 179, 179) inset;
+}
+
+textarea{
+    width: 100%;
+    height: 15vh;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #949494;
+    box-sizing: border-box;
+    border-radius: 5px;
+    -webkit-box-shadow:0 0 4px rgb(179, 179, 179) inset;
+    -moz-box-shadow:0 0 4px rgb(179, 179, 179) inset;
+    box-shadow:0 0 4px rgb(179, 179, 179) inset;
+  }
+  
+input[type=checkbox]{
+    width: auto;
+    transform: scale(1.5);
+  }
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.checkbox_label {
+    font-size: .75em;
+}
+  
+.submit {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+button[type=submit] {
+    text-transform: uppercase;
+    background-color: #3da743;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    width: 50vw;
+    height: 5vh;
+    border-radius: 10px;
+    border:  none;
+    box-shadow: 2px 2px rgb(179, 179, 179);
+    max-width: 300px;
+  }
+  
+button[type=submit]:hover, .resume_link:hover{
+    opacity: 0.8;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: #d6d6d6;
+    color: black;
+    font-size: 0.8em;
+    height: 80px;
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+@media only screen and (min-width: 480px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .research_highlights{
+        grid-template-columns: auto auto;
+        grid-gap: 2vw;
+    }
+
+    .current_projects img {
+        width: 40vw;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    body {
+        font-size: 22px;
+    }
+    
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+        top: 0;
+        padding: 0;
+        height: 80px;
+        margin: 0;
+    }
+
+    .nav_item {
+        margin: 0;
+        color: white;
+        height: 80px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger{
+        display: none;
+    }
+    
+    .current, .nav_item:hover{
+        background-color: rgb(245, 245, 245);
+        color: black;
+    }
+    
+    .research_highlights{
+        grid-template-columns: auto auto auto;
+    }
+
+    .current_projects img {
+        width: 25vw;
+    }
+
+    .checkbox_text{
+        width: auto;
+        margin: 0 2vw;
+    }
+
+    .checkbox {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .research_highlights{
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .current_projects img {
+        width: 20vw;
+        height: 100%;
+    }
+
+    label{
+        width: 15vw;
+        text-align: right;
+        margin: 10px 20px 20px 0;
+    }
+
+    .firstname, .lastname, .email, .company{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .message{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .checkbox_text{
+        text-align: left;
+    }
+    
+    input {
+        width: 50vw;
+    }
+    
+    textarea{
+        display: inline-block;
+        width: 50vw;
+      }
+}
+
+@media only screen and (min-width: 1800px) {
+
+    .research_highlights{
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .current_projects img {
+        width: 15vw;
+    }
+
+    .bio{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .bio img, .resume_link{
+        margin: auto;
+    }
+
+    .bio_text{
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+
+    .bio_text p{
+        text-align: left;
+    }
+
+    .resume_link{
+        width: 200px;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) { 
+    html{
+        scroll-behavior: auto;
+    }
+
+    .fadein {        
+        -webkit-animation: fadein 0s;
+        -moz-animation: fadein 0s; 
+        -ms-animation: fadein 0s; 
+        -o-animation: fadein 0s; 
+        animation: fadein 0s;
+    }
+
+    #skip a{
+        -webkit-transition: none;
+        transition: none;
+    }
+
+    .text_image_container:hover{
+        transform: none;
+        cursor: pointer;
+    }
+
+    .text_container{
+        transform: rotate(0deg);
+        visibility: hidden;
+    }
+
+    .text_image_container:hover, .text_image_container:focus, .text_image_container:focus-within{
+        transform: rotateY(0deg)
+    }
+
+    .click_for_text{
+        visibility: visible;
+    }
+
+    .youtube_music, .remote_hires, .rta, .welcome{
+        background-attachment: scroll;
+    }
+}
