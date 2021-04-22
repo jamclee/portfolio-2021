@@ -356,6 +356,7 @@ p{
 
 .youtube_music, .remote_hires, .rta {
     background-attachment: fixed;
+    background-color: black;
 }
 
 .winning_futures, .wharton{
